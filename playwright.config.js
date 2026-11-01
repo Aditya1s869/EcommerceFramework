@@ -35,6 +35,7 @@ export default defineConfig({
     video:'retain-on-failure',
     permissions:['notifications','geolocation'],
     actionTimeout:15000,
+    headless:false,
   },
 
   /* Configure projects for major browsers */
