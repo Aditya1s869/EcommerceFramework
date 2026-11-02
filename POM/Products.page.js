@@ -13,10 +13,13 @@ class Product{
      this.ProductItemName=page.locator(".inventory_item_name ")
      this.ProductItemPrice=page.locator(".inventory_item_price")
     }
-    async AddtoCart(){
-       await this.AddToCartBtn.first().click()
-
-    }
+    async addProductToCart(productName) {
+    // Locate the specific product card that contains the matching text
+    const productCard = this.page.locator('.inventory_item').filter({ hasText: productName });
+    
+    // Within that specific card, click the 'Add to cart' button
+    await productCard.locator('button:has-text("Add to cart")').click();
+  }
 
     
 
