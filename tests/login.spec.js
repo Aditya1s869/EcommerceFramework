@@ -10,4 +10,6 @@ let pass=userData.password
 test("login to sauce demo",async({page})=>{
     let login=new Login(page)
      await login.LoginToSauceDemo(url,username,pass)
+     await login.LoginToSauceDemo(url,username,pass)
+     await login.LoginToSauceDemo(url,username,pass)
 })
